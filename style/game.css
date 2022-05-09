@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Calibri";
+  outline: none;
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+/**/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    overflow: hidden;
+}
+.wrapper {
+    max-width: 1280px;
+    display: block;
+}
+
+.traffic-img {
+    animation: traffic-translation 2s linear infinite;
+    margin-top: -2px;
+    width: 250px;
+    z-index: -10;
+}
+@keyframes traffic-translation {
+    0% {transform: translateY(0%);}
+    100% {transform: translateY(100%);}
+}
+
+.car {
+    width: 80px;
+    position: fixed;
+    top: 70%;
+    transform: translateX(-100px);
+    transition: .2s;
+    user-select: none;
+    cursor: pointer;
+}
+.carLeft {
+    transform: translateX(-220px);
+}
+
+.score {
+  font-size: 28px;
+  position: fixed;
+  top: 20px;
+  z-index: 10;
+  width: 250px;
+  text-align: center;
+  color: white;
+}
+.toMainMenu {
+  font-size: 18px;
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  width: 100px;
+  text-align: center;
+  color: white;
+}
